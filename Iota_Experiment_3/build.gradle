@@ -13,11 +13,18 @@ repositories {
     mavenCentral()
 }
 
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+
 ext {
     set('vaadinVersion', "23.1.2")
 }
 
 dependencies {
+    implementation 'com.github.iotaledger:iota-java:1.0.0-beta8'
     implementation 'com.vaadin:vaadin-spring-boot-starter'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
